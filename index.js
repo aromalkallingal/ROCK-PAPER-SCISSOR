@@ -12,6 +12,7 @@ const scissorButton = document.querySelector('.scissor');
 const outcomeDiv = document.querySelector('.outcome');
 const playerScoreSpan = document.querySelector('.player-score');
 const computerScoreSpan = document.querySelector('.comp-score');
+const win = document.getElementById('win');
 
 
 
@@ -22,39 +23,32 @@ let playerScore = 0
 
 let playRound = (computerSelection,playerLower) => {
     if (computerSelection == playerLower){
-        const p = document.createElement('p');
-        p.innerText = "You Tied!"
-        outcomeDiv.appendChild(p)
+        win.innerText = "You Tied!"
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'paper' ){
         playerScore++;
-        const p = document.createElement('p');
-        p.innerText = "You win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "You win";
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'scissor' ){
         compScore++
-        const p = document.createElement('p');
-        p.innerText = "Computer win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "Computer win";
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'scissor' ){
         playerScore++
-        const p = document.createElement('p');
-        p.innerText = "You win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "You win";
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'rock' ){
         compScore++
-        const p = document.createElement('p');
-        p.innerText = "Computer win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "Computer win";
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'scissor' && playerLower == 'rock' ){
         playerScore++
-        const p = document.createElement('p');
-        p.innerText = "You win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "You win";
+        // outcomeDiv.append(win);
     }else if(computerSelection == 'scissor' && playerLower == 'paper' ){
         compScore++
-        const p = document.createElement('p');
-        p.innerText = "Computer win";
-        outcomeDiv.appendChild(p);
+        win.innerText = "Computer win";
+        // outcomeDiv.append(win);
     }
 }
 
