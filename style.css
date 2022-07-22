@@ -97,3 +97,7 @@ button:focus { outline:0; }
 .scissor {
   background: #f77f00;
 }
+
+p#win {
+  text-align: center;
+}

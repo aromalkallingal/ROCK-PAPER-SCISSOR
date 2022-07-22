@@ -23,19 +23,19 @@ let playerScore = 0
 
 let playRound = (computerSelection,playerLower) => {
     if (computerSelection == playerLower){
-        win.innerText = `"You Tied!" computer selected ${computerSelection}`;
+        win.innerText = `"You Tied!" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'paper' ){
         playerScore++;
-        win.innerText = `"You win" computer selected ${computerSelection}`;
+        win.innerText = `"You win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'scissor' ){
         compScore++
-        win.innerText = `"Computer win" computer selected ${computerSelection}`;
+        win.innerText = `"Computer win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'scissor' ){
         playerScore++
-        win.innerText = `"You win" computer selected ${computerSelection}`;
+        win.innerText = `"You win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'rock' ){
         compScore++
