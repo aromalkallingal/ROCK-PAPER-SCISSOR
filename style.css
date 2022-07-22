@@ -73,8 +73,10 @@ button:focus { outline:0; }
 
 .running-score {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 141px;
+  align-items: center;
 }
 
 .outcome {
