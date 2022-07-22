@@ -23,31 +23,31 @@ let playerScore = 0
 
 let playRound = (computerSelection,playerLower) => {
     if (computerSelection == playerLower){
-        win.innerText = "You Tied!"
+        win.innerText = `"You Tied!" computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'paper' ){
         playerScore++;
-        win.innerText = "You win";
+        win.innerText = `"You win" computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'rock' && playerLower == 'scissor' ){
         compScore++
-        win.innerText = "Computer win";
+        win.innerText = `"Computer win" computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'scissor' ){
         playerScore++
-        win.innerText = "You win";
+        win.innerText = `"You win" computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'paper' && playerLower == 'rock' ){
         compScore++
-        win.innerText = "Computer win";
+        win.innerText = `"Computer win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'scissor' && playerLower == 'rock' ){
         playerScore++
-        win.innerText = "You win";
+        win.innerText = `"You win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }else if(computerSelection == 'scissor' && playerLower == 'paper' ){
         compScore++
-        win.innerText = "Computer win";
+        win.innerText = `"Computer win" - computer selected ${computerSelection}`;
         // outcomeDiv.append(win);
     }
 }
@@ -104,7 +104,7 @@ const updateScore = (playerScore, compScore) => {
 rockButton.addEventListener('click', function() {
     const computerSelection = computerPlay();
     const playerSelection = "rock";
-    playRound(playerSelection, computerSelection);
+    playRound(computerSelection, playerSelection);
     checkForWinner(playerScore, compScore);
     updateScore(playerScore, compScore);
 });
@@ -114,7 +114,7 @@ rockButton.addEventListener('click', function() {
 paperButton.addEventListener('click', function() {
     const computerSelection = computerPlay();
     const playerSelection = "paper";
-    playRound(playerSelection, computerSelection);
+    playRound(computerSelection, playerSelection);
     checkForWinner(playerScore, compScore);
     updateScore(playerScore, compScore);
 });
@@ -124,7 +124,7 @@ paperButton.addEventListener('click', function() {
 scissorButton.addEventListener('click', function() {
     const computerSelection = computerPlay();
     const playerSelection = "scissor";
-    playRound(playerSelection, computerSelection);
+    playRound(computerSelection, playerSelection);
     checkForWinner(playerScore, compScore);
     updateScore(playerScore, compScore);
 });
