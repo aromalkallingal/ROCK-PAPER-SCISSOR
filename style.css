@@ -101,3 +101,9 @@ button:focus { outline:0; }
 p#win {
   text-align: center;
 }
+
+h2.computer-won {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
